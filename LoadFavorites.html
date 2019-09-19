@@ -1,0 +1,76 @@
+<html>
+<script src="StorageArray.js"></script>
+<script>
+    var favoritesStorage = new StorageArray(localStorage, "FavoritesStorage");
+    var favoritesArray = [
+        "adventure time", 
+    "agents of shield", 
+    "american dad", 
+    "american horror story", 
+    "arrow", 
+    "avatar", 
+    "ben 10", 
+    "breaking bad", 
+    "boku no hero academia", 
+    "clarence", 
+    "dexter", 
+    "dragon ball super", 
+    "doctor who", 
+    "elementary", 
+    "falling skies", 
+    "fresh off the boat", 
+    "futurama", 
+    "game of thrones", 
+    "genius", 
+    "gotham", 
+    "genius", 
+    "greys anatomy", 
+    "heroes", 
+    "homeland", 
+    "house", 
+    "humans", 
+    "how i met your mother", 
+    "inuyasha", 
+    "dc s legends of tomorrow", 
+    "legion", 
+    "limitless", 
+    "misfits", 
+    "modern family", 
+    "mondaiji tachi ga isekai kara kuru sô desu yo", 
+    "mr robot", 
+    "no game no life", 
+    "prison break", 
+    "regular show", 
+    "rick and morty", 
+    "the big bang theory", 
+    "the flash", 
+    "the last man on earth", 
+    "the simpsons", 
+    "the strain", 
+    "the walking dead", 
+    "two and a half men", 
+    "vikings", 
+    "silicon valley", 
+    "shingeki no kyojin", 
+    "skins", 
+    "south park", 
+    "star vs the forces of evil", 
+    "steven universe", 
+    "stranger things", 
+    "summer camp island", 
+    "supergirl", 
+    "sword art online", 
+    "we bare bears", 
+    "weeds", 
+    "wilfred", 
+    "witch craft works", 
+    "young sheldon"
+];
+//localStorage.clear(); //<------------------------ Reset
+favoritesArray.forEach(function (i) {
+    favoritesStorage.addItem(0, i);
+});
+favoritesStorage.setSort(false, false);
+alert(favoritesArray.length+" favoritesStorage added to localStorage")
+</script>
+</html>

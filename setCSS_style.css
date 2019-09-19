@@ -1,0 +1,29 @@
+body {
+    background-color:black; 
+    font-size: 18px; 
+    
+    color: black;}
+i {
+    color: white;
+}
+#previous {
+    float: left;
+}
+#next {
+    float: right;
+}
+#recentsMenus {
+    float: left;
+}
+#frame {
+    float: right;
+}
+li {
+    color: white;
+}
+li:hover {
+    color: grey;
+}
+#interface {
+    text-align: center; 
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Entertainment Browser</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" href="icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="setCSS_style.css">
+    <script src="StorageArray.js"></script>
+    <script src="setLoader.js"></script>
+    <script src="setResize.js"></script>
+    <script src="setServers.js"></script>
+    <script src="setEngine.js"></script>
+</head>
+<body onresize=setResize(true) onload=setResize(true)>
+    <!---------------------------------------------------------------------------------------------------------------->
+    <div id="interface" class="container-fluid" onmouseover=setLink()>
+
+        <button type="button" id="previous" class="btn btn-primary" onclick=setEpisode(-1)><i class="fa fa-step-backward"></i></button>
+        <button type="button" id="next" class="btn btn-primary" onclick=setEpisode(+1)><i class="fa fa-step-forward"></i></button>
+
+        <span id="interface_0">
+        <button id="recent" class="btn btn-warning" onclick=recent()><i id="recent_icon"></i></button>
+        <button id="load" class="btn btn-success" onclick=load()><i id="load_icon" class="fa fa-refresh"></i></button>
+        <input id="search" list="favorite" type=list size="30%" value="" placeholder="Search..." autofocus>
+        <datalist id="favorite"></datalist>
+        <button id="search_reset" class="btn btn-danger" onclick=reset()><i class="fa fa-eraser"></i></button>
+        </span>
+        
+        <span id="interface_1">
+        <button id="search_save" class="btn btn-secondary" onclick=save()><i class="fa fa-save"></i></button>
+        <select id="season"></select>
+        <select id="episode"></select>
+        <button id="server_link" class="btn btn-dark" onclick=server()><i class="fa fa-server"></i></button>
+        <select id="server"></select>
+        <button id="sandBox" class="btn btn-info" onclick=frameSandBox()><i class="fa fa-lock"></i></button>
+        <a id="link" href="" target="_blank"><button class="btn btn-info">Link <i class="fa fa-external-link-square"></i></button></a>
+        </span>
+
+    </div></br>
+    <!---------------------------------------------------------------------------------------------------------------->
+    <div if="menus" class="container-fluid" onmouseover=setLink()>
+
+        <span id="recentsMenus"></span>
+        <span id="frameSandBox">
+        <iframe id="frame" src="" onload=isLoaded(true) allowfullscreen sandbox="allow-scripts allow-same-origin"></iframe>
+        </span>
+
+    </div>
+    <!---------------------------------------------------------------------------------------------------------------->
+</body>
+</html>
